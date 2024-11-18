@@ -5,20 +5,19 @@ using UnityEngine;
 
 public class Delegate : MonoBehaviour
 {
-	public TextMeshProUGUI text1;
-	public TextMeshProUGUI text2;
+	public TMP_InputField input1;
+	public TMP_InputField input2;
 
 	private float num1;
 	private float num2;
-	private float result;
 
 	private delegate void Method();
 	private Method method;
 
 	public void Calc()
 	{
-		num1 = float.Parse(text1.text);
-		num2 = float.Parse(text2.text);
+		num1 = float.Parse(input1.text);
+		num2 = float.Parse(input2.text);
 		method.Invoke();
 	}
 
